@@ -8,8 +8,8 @@ async def send_message(
     read_stream: MemoryObjectReceiveStream,
     write_stream: MemoryObjectSendStream,
     message: JSONRPCMessage,
-    timeout: float = 5,
-    retries: int = 3,
+    timeout: float = 120,
+    retries: int = 1,
 ) -> dict:
     """
     Send a JSON-RPC message to the server and return the response.
